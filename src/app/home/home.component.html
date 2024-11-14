@@ -1,0 +1,20 @@
+<mat-toolbar id="toolbar"><img src="img/logo.png" alt="logo" id="logo"><h3>Flags Quiz </h3>
+</mat-toolbar>
+
+<mat-divider>
+</mat-divider>
+<div class="banderas">
+    @for (item of jsonDataHome; track $index) {
+    <div class="flagContainer">
+        <img [src]="'img/'+item.code+'.svg'" [alt]="item.country"
+            class="flagMini">
+    </div>
+    }
+    <mat-divider>
+    </mat-divider>
+</div>
+<mat-tab-group >
+    <mat-tab label="Play">  <app-game [jsonData]="jsonDataHome" id="appGame"></app-game> </mat-tab>
+    <mat-tab label="About"> <app-about></app-about> </mat-tab>
+    <mat-tab label="Contact"><app-contact></app-contact> </mat-tab>
+</mat-tab-group>

@@ -1,0 +1,44 @@
+#headPoints{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.image-container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    width: 800px;
+    height: 500px;
+}
+
+.quizImage {
+    width: 450px;
+    height: min-content;
+    aspect-ratio: auto;
+    padding: 10px 0px 10px 0px;
+   }
+
+.button-container>* {
+    margin: 5px;
+    width: 200px;
+}
+
+::ng-deep .answerButtons.green {
+    -webkit-transition: background-color 1000ms linear;
+    -ms-transition: background-color 1000ms linear;
+    transition: background-color 1000ms linear;
+    background-color: rgb(51, 190, 51) !important;
+    color: aliceblue !important;
+}
+
+::ng-deep .answerButtons.red {
+    -webkit-transition: background-color 1000ms linear;
+    -ms-transition: background-color 1000ms linear;
+    transition: background-color 1000ms linear;
+    background-color: rgb(226, 45, 45) !important;
+    color: aliceblue !important;
+}

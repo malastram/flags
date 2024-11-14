@@ -1,0 +1,24 @@
+<div id="game">
+  <div id="options-container">
+    
+    <h2>Welcome to the flags quiz!!</h2>
+  <div id="background" (click)="playGame()"><h2 id="start">START</h2></div>
+      <div id="options">
+        <h3>Questions </h3>
+        <mat-radio-group aria-label="Select an option" id="questionsRadio" [formControl]="questions">
+          <mat-radio-button value="15" [checked]="true">15</mat-radio-button>
+          <mat-radio-button value="25"  >25</mat-radio-button>
+          <mat-radio-button value="50">50</mat-radio-button>
+        </mat-radio-group>
+      </div>
+      <div class="button-container">
+       <h4>Click to the earth to begin game</h4>
+      
+       <h4>Select first the number of questions</h4>
+      </div>
+    </div>
+@if(play){
+<app-gameplay [countryData]="jsonData" [questionsChild]="selectopt"></app-gameplay>
+}
+
+</div>

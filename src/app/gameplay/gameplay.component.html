@@ -1,0 +1,43 @@
+@if(restartGame==false){
+
+<div class="playHeader">
+  <h3 id="headPoints">Page   {{page +1}}  of {{questionsChild}}     -----------     {{points}} points  </h3>
+</div>
+
+<div class="image-container">
+<img [src]="'img/'+randomCountry.code+'.svg'" [alt]='randomCountry.code' class="quizImage">
+
+</div>
+}@else{
+  <div class="playHeader">
+    <h3>End Game !</h3>
+  </div>
+  
+  <div class="image-container">
+<h2>Points: {{points}}</h2>  
+  </div>
+}
+
+@if(restartGame==false){
+  <div class="button-container">
+
+    <button mat-raised-button (click)="confirm(arrayAnswers[0].toString())" mat-fab extended class="answerButtons" color="orange">
+      {{arrayAnswers[0]}}
+    </button>
+    <button mat-raised-button (click)="confirm(arrayAnswers[1].toString())" mat-fab extended class="answerButtons">
+        {{arrayAnswers[1]}}
+      </button>
+      <button mat-raised-button  (click)="confirm( arrayAnswers[2].toString())" mat-fab extended class="answerButtons" >
+        {{arrayAnswers[2]}}
+      </button>
+      <button mat-raised-button (click)="confirm( arrayAnswers[3].toString())" mat-fab extended class="answerButtons">
+        {{arrayAnswers[3]}}
+      </button>
+      </div>
+}@else {
+  <div class="button-container">
+  <button mat-raised-button (click)="restart()" mat-fab extended >  RESTART  
+  </button>  </div>
+
+}
+

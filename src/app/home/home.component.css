@@ -1,0 +1,50 @@
+.flagMini{
+    height: 30px;
+}
+
+.banderas {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+ 
+}
+
+#logo{
+  width:50px;
+  margin: 5px 85px 5px 5px;
+  border-radius: 12px;
+}
+
+#toolbar{
+  display: flex;
+  align-items: center;
+  height: 70px;
+  background-color: rgb(173, 190, 201);
+}
+
+#toolbar > h3{
+  font-size: 30px;
+}
+#menu{
+  overflow: hidden;
+}
+
+.flagContainer {
+    margin: 3px;
+    text-transform: uppercase;
+    will-change: transform;
+    transform: translateX(0);
+    white-space: nowrap;
+    animation: marquee 26s linear infinite running;
+ 
+}
+@keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-200%);
+    }
+  }
+  

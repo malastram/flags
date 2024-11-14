@@ -1,0 +1,68 @@
+#game{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 600px;
+    height: 850px;
+    z-index: 1;
+ }
+ #options{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+ }
+ #options > h3{
+    margin-right: 10px;
+ }
+
+
+#background{  
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+     width:1200px;
+    height: 600px;   
+    position:fixed;
+    top: 150px;
+    /* left:auto; */
+    background-image:url('/img/map.png') ; 
+    background-repeat: no-repeat;
+    background-size: 750px;
+    background-attachment: local;
+    background-position: 50% 0; 
+    filter: blur(1px) opacity(0.4); 
+    margin: 0;
+}
+
+ 
+#background:hover{
+filter: blur(0px) opacity(0.4); 
+}  
+#start{
+    position:fixed;
+    top: 300px;
+    left: 530px;
+    color: rgb(255, 247, 247);
+    font-size: 50px;
+}
+
+.button-container{
+    display: row;
+    align-items: center;
+}
+#playButton{
+margin:0 auto;
+background-color: gainsboro;
+opacity: 0.8;
+}
+#earth{
+     z-index: 9999;
+   
+}
+#earth > img{
+    width: 1000px;
+    opacity: 0.2;
+    position: fixed;
+    left: 250px;
+    top: 110px;
+}
